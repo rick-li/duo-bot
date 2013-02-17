@@ -27,7 +27,7 @@ class PostTest{
 		String sjson = new Gson().toJson(l)
 
 		println sjson
-		r.post("http://127.0.0.1/duo-bot/index.php?r=patient/createPatients", sjson)
+		//r.post("http://127.0.0.1/duo-bot/index.php?r=patient/createPatients", sjson)
 		
 		
 	}

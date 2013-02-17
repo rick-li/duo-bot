@@ -23,4 +23,8 @@ class Config {
 	int getProxyPort(){
 		return Integer.parseInt(props.get("proxy.port").toString().trim())
 	}
+	
+	String getStoreUrl(){
+		return props.get("store.url")
+	}
 }

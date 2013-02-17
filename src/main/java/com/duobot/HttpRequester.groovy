@@ -14,14 +14,19 @@ class HttpRequester {
 	Config cfg = Config.getInstance()
 	String get(String sUrl, String charset){
 		println "Get ${sUrl}."
-		URL url = new URL(sUrl)
-		def http = new HTTPBuilder(sUrl)
-		String result = ""
-		if(cfg.useProxy()){
-			http.setProxy(cfg.getProxyHost(), cfg.getProxyPort(), "http")
-		}
-		return http.get(uri: url, contentType: TEXT){ resp->
-			return resp.getEntity().getContent().getText(charset)
+		try{
+			URL url = new URL(sUrl)
+			def http = new HTTPBuilder(sUrl)
+			String result = ""
+			if(cfg.useProxy()){
+				http.setProxy(cfg.getProxyHost(), cfg.getProxyPort(), "http")
+			}
+			return http.get(uri: url, contentType: TEXT){ resp->
+				return resp.getEntity().getContent().getText(charset)
+			}
+		}catch(Exception e){
+			e.printStackTrace()
+			return ""
 		}
 	}
 

@@ -9,10 +9,10 @@ import org.junit.Test
 import com.google.common.io.Resources
 
 class ShilehuiPatientTest {
-	ShilehuiPatient s
+	Shilehui s
 
 	@Before void init(){
-		s = new ShilehuiPatient()
+		s = new Shilehui()
 	}
 
 	@Test void testGroovyFind(){
