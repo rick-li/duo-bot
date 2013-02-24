@@ -2,14 +2,6 @@ package com.duobot
 
 class Bootstrap {
 	static void main(String[] args){
-		Yaolan yaolan = new Yaolan()
-		yaolan.setIndexPath("/board_h_40_1.aspx")
-		yaolan.setPageTpl("/board_h_40_#PAGE_NO.aspx")
-		yaolan.setStart(41)
-		yaolan.setLimit(100)
-		yaolan.setAllowSubmit(true)
-		yaolan.doScrap()
-		return
 		
 		
 		Shanai shanai = new Shanai()
@@ -45,5 +37,14 @@ class Bootstrap {
 		i.setStart(1)
 		i.setLimit(2)
 		i.doScrap()
+		
+		Yaolan yaolan = new Yaolan()
+		yaolan.setIndexPath("/board_h_40_1.aspx")
+		yaolan.setPageTpl("/board_h_40_#PAGE_NO.aspx")
+		yaolan.setStart(1)
+		yaolan.setLimit(10)
+		yaolan.setAllowSubmit(true)
+		yaolan.doScrap()
+		
 	}
 }
