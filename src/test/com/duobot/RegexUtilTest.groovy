@@ -25,5 +25,9 @@ class RegexUtilTest {
 		
 		def date2 = RegexUtil.extractDate("asdfsafdak 2012-1-15 10:23asdfdsaf")
 		Assert.assertEquals("2012-1-15", date2)
+		
+		
+		def date3 = RegexUtil.extractDate("")
+		println date3
 	}
 }

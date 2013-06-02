@@ -1,5 +1,6 @@
 package com.duobot
 
+import java.util.List;
 import java.util.concurrent.Callable
 import java.util.concurrent.CompletionService
 import java.util.concurrent.ExecutorCompletionService
@@ -140,6 +141,12 @@ class Shilehui extends ScraperTemplate {
 			}
 		}
 		return ""
+	}
+
+
+	@Override
+	public List<Contact> postProcessContacts(List<Contact> contacts) {
+		return contacts;
 	}
 
 

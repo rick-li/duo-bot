@@ -1,5 +1,7 @@
 package com.duobot;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -21,6 +23,8 @@ public class RegexUtil {
 		if(m.find()){
 			return m.group();
 		}
-		return "";
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		return sdf.format(new Date());
+		
 	}
 }

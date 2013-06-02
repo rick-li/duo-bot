@@ -1,5 +1,7 @@
 package com.duobot
 
+import java.util.List;
+
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
@@ -123,6 +125,12 @@ class Ikcw extends ScraperTemplate{
 			}
 		}
 		return ""
+	}
+
+
+	@Override
+	public List<Contact> postProcessContacts(List<Contact> contacts) {
+		return contacts;
 	}
 
 }

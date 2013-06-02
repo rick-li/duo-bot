@@ -54,7 +54,7 @@ abstract class ScraperTemplate {
 			}
 			println "result retrieved."
 			if(result)
-				submitResults(result)
+				submitResults(postProcessContacts(result))
 		}
 		exec.shutdown()
 	}
@@ -80,6 +80,8 @@ abstract class ScraperTemplate {
 		requester.post("http://www.sicpc.com/duo-bot/index.php?r=patient/createPatients", strResult)
 //		requester.post("http://127.0.0.1/duo-bot/index.php?r=patient/createPatients", strResult)
 	}
+	abstract List<Contact> postProcessContacts(List<Contact> contacts);
+	
 	abstract void doConfig();
 
 	abstract List<String> getPatientPageList(String indexHtml);

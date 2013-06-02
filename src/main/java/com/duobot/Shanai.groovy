@@ -4,6 +4,7 @@ import java.util.regex.Pattern
 
 
 
+import java.util.List;
 import java.util.regex.Pattern
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
@@ -18,15 +19,6 @@ class Shanai extends ScraperTemplate{
 		this.baseUrl = "http://www.shanai365.com/"
 		this.source = "善爱网"
 		this.charset = "utf-8"
-		this.blackNameList = [
-			'医',
-			'放射',
-			'血',
-			'疗',
-			'大夫',
-			'儿科',
-			'内科'
-		]
 	}
 
 	@Override
@@ -71,6 +63,12 @@ class Shanai extends ScraperTemplate{
 	public Contact getOneContact(String baseSelector, Element el) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public List<Contact> postProcessContacts(List<Contact> contacts) {
+		// TODO Auto-generated method stub
+		return contacts;
 	}
 
 }
