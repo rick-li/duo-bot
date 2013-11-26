@@ -77,7 +77,9 @@ abstract class ScraperTemplate {
 		println strResult
 		if(!allowSubmit) return
 		println "submiting results"
-		requester.post("http://www.sicpc.com/duo-bot/index.php?r=patient/createPatients", strResult)
+		//requester.post("http://www.sicpc.com/duo-bot/index.php?r=patient/createPatients", strResult)
+		requester.post("http://wwwroot.zhy26281.zhihui.chinaccnet.cn/duo-bot/index.php?r=patient/createPatients", strResult)
+		 //http://www.sicpc.com/duo-bot/index.php
 //		requester.post("http://127.0.0.1/duo-bot/index.php?r=patient/createPatients", strResult)
 	}
 	abstract List<Contact> postProcessContacts(List<Contact> contacts);
