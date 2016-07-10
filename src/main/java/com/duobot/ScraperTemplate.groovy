@@ -78,7 +78,7 @@ abstract class ScraperTemplate {
 		if(!allowSubmit) return
 		println "submiting results"
 		//requester.post("http://www.sicpc.com/duo-bot/index.php?r=patient/createPatients", strResult)
-		requester.post("http://wwwroot.zhy26281.zhihui.chinaccnet.cn/duo-bot/index.php?r=patient/createPatients", strResult)
+		requester.post("http://112.124.48.161//duo-bot/index.php?r=patient/createPatients", strResult)
 		 //http://www.sicpc.com/duo-bot/index.php
 //		requester.post("http://127.0.0.1/duo-bot/index.php?r=patient/createPatients", strResult)
 	}
